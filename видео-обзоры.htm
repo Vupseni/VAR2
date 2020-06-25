@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>BMW</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+<header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Autocar</span>
+      </div>
+      <div id="about">
+	  <a href="index.html" title="Главная">Главная</a>
+        <a href="каталог.htm" title="Каталог" onclick="slowScroll('#main')">Каталог</a>
+        <a href="видео-обзоры.htm" onclick="slowScroll('#overview')" title="Видео-обзоры">Видео-обзоры</a>
+
+  </header>
+<div id="overview">
+  <h1>Обзоры</h1>
+  <h4>от ведущих автолюбителей</h4>
+  <div class="video-responsive">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/C1Hh9tj_5w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <span>от Джерееми Кларксона</span>
+  </div>
+  <div class="video-responsive">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/94ui81ZFl0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <span>от Джерееми Кларксона</span>
+  </div>
+  <div class="video-responsive">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SgDZlcPsqgw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <span>от Алана Енилеева</span>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  function slowScroll(id) {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    },500);
+  }
+
+  $(document).on ("scroll", function () {
+    if($(window).scrollTop() === 0)
+    $("header").removeClass("fixed");
+    else-
+    $("header").attr("class", "fixed");
+  });
+</script>
+</body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>BMW</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Autocar</span>
+      </div>
+      <div id="about">
+        <a href="каталог.htm" title="Каталог" onclick="slowScroll('#main')">Каталог</a>
+        <a href="видео-обзоры.htm" onclick="slowScroll('#overview')" title="Видео-обзоры">Видео-обзоры</a>
+
+  </header>
+  <div id="top">
+    <h1> BMW </h1>
+    <h3> для автолюбителей </h3>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  function slowScroll(id) {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    },500);
+  }
+
+  $(document).on ("scroll", function () {
+    if($(window).scrollTop() === 0)
+    $("header").removeClass("fixed");
+    else-
+    $("header").attr("class", "fixed");
+  });
+</script>
+
+</body>
+</html>

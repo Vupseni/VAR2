@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMW</title>
+  <link rel="stylesheet" href="1s.css">
+  <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+<header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Autocar</span>
+      </div>
+      <div id="about">
+	    <a href="index.html" title="Главная">Главная</a>
+        <a href="каталог.htm" title="Каталог" onclick="slowScroll('#main')">Каталог</a>
+        <a href="видео-обзоры.htm" onclick="slowScroll('#overview')" title="Видео-обзоры">Видео-обзоры</a>
+
+  </header>
+  <div id="main">
+  <div class="intro">
+    <h2>Список автомобилей</h2>
+    <span>Немного о BMW</span>
+</div>
+<div class="text">
+    <span>BMW AG (аббревиатура от Bayerische Motoren Werke AG, с нем. — «Баварские моторные заводы») — немецкий производитель автомобилей, мотоциклов, двигателей, а также велосипедов. Председателем компании до 2015 года был Норберт Райтхофер, с мая 2015 года — Харальд Крюгер, с 18 июля 2019 года — Оливер Ципсе. Главный дизайнер — Йозеф Кабан. Девиз компании — «Freude am Fahren», с нем. — «С удовольствием за рулём». Для англоязычных стран был придуман также девиз «The Ultimate Driving Machine» (с англ. — «Идеальная машина для вождения»)
+    </span>
+  </div>
+  <table>
+    <table border="0" width="100%" height="90%">
+<tr align="left">
+<td><img src="https://avatars.mds.yandex.net/get-pdb/1105309/315cbb12-caa6-4d7f-8324-a21c1ba6eee3/s1200?webp=false"
+width="100%"
+<td><p>BMW M5 — доработанная подразделением BMW Motorsport версия автомобиля BMW пятой серии. Первое поколение было представлено в 1986 году. Последующие поколения M5 сменялись совместно с каждым поколением автомобилей пятой серии, включающей E34, E39, E60/61, F10. С началом производства модели G30, после поступления первых заказов, с марта 2018 года началось также производство её M-версии.
+</p></td>
+</td>
+</tr>
+<tr>
+
+<td><img src="https://s1.1zoom.me/b5050/716/BMW_F85_Blue_Crossover_534257_3840x2400.jpg"
+  width="100%">
+  <p>BMW X5 M — доработанная отделом «BMW M GmbH» версия серийного кроссовера с функцией полного привода xDrive и улучшенными техническими параметрами.</p>
+</td>
+</tr>
+<tr >
+
+  <td><img src="https://images.wallpaperscraft.ru/image/bmw_z8_e52_serebristyj_kabriolet_vid_sboku_107948_1920x1080.jpg"
+    width="100%">
+  <p>Двухместный спортивный автомобиль в кузове родстер, выпускавшийся немецким автопроизводителем BMW с 1999 по 2003 годы. Заводской индекс модели — E52.
+Z8 являлся серийным вариантом концепт-кара Z07, впервые показанного в 1997 году. Дизайн автомобиля является результатом работы команды во главе с Крисом Бэнглом. Внешним видом занимался Хенрик Фискер, интерьером Скотт Лемперт. Прототип Z07 изначально был попыткой повторить модель BMW 507, а также создавался с целью отметить встречу нового тысячелетия. Z07 была встречена овациями на Токийском автосалоне. Подавляющая популярность концепт-кара стимулировала BMW принять решение о выпуске ограниченной серии под названием Z8. В итоге были собраны 5 703 автомобиля.</p></td>
+</tr>
+  </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  function slowScroll(id) {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    },500);
+  }
+
+  $(document).on ("scroll", function () {
+    if($(window).scrollTop() === 0)
+    $("header").removeClass("fixed");
+    else-
+    $("header").attr("class", "fixed");
+  });
+</script>
+
+</body>
