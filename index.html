@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script language="javascript">
+startdate = new Date();
+clockStart = startdate.getTime();
+function initStopwatch() {
+  var thisTime = new Date();
+  return (thisTime.getTime() - clockStart)/1000;
+}
+function getSecs() {
+  var tSecs = Math.round(initStopwatch());
+  var iSecs = tSecs % 60;
+  var iMins = Math.round((tSecs-30)/60);
+  var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+  var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+  document.getElementById("timer-counter").innerHTML = sMins+":"+sSecs;
+  setTimeout('getSecs()', 1000);
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,7 +26,10 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="favicon.ico"/>
 </head>
-
+<body onLoad="getSecs()">
+<span>Вы здесь уже:</span>
+<span id='timer-counter' style='color:red;font-size:150%;font-weight:bold;'></span>
+</body>
 <body>
   <header>
     <div id="logo" onclick="slowScroll('#top')">
